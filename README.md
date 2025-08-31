@@ -1,87 +1,107 @@
-# Moon Cresta - Jogo Retro
+# Moon Cresta - Clone em Python
 
-Um jogo estilo fixed shooter inspirado no clássico Moon Cresta, desenvolvido em Python com Pygame.
+## Sobre o Projeto
 
-## Características do Jogo
+Este é um clone do clássico jogo Moon Cresta, desenvolvido em Python com a biblioteca Pygame. O projeto foi criado usando a IDE Cursor com auxílio de IA para gerar um jogo no estilo fixed shooter com mecânicas de progressão únicas.
 
-- **Três fases**: Cada fase aumenta a dificuldade e adiciona novos tipos de inimigos
-- **Sistema de estágios**: A nave acopla novos estágios após cada fase, aumentando o poder de fogo
-- **Inimigos variados**: Diferentes tipos de inimigos com comportamentos únicos
-- **Efeitos visuais**: Explosões e fundo estrelado
-- **Interface completa**: Score, vida, nível e estágio da nave
+## Características
 
-## Como Jogar
+- **Sistema de Estágios**: A nave evolui após cada fase completada
+- **Três Níveis**: Dificuldade progressiva com diferentes inimigos
+- **Gráficos Adaptativos**: Usa sprites personalizados com fallback para formas geométricas
+- **Interface Completa**: Score, vida e status do jogador
+- **Sistema de Partículas**: Efeitos visuais de explosão
 
-### Controles
+## Tecnologias Utilizadas
 
-- **Setas direcionais**: Mover a nave
-- **Barra de espaço**: Atirar
-- **ESC**: Sair do jogo
-- **R**: Reiniciar (após game over ou vitória)
+- **Python 3.7+**
+- **Pygame 2.5.2**
+- **IDE Cursor** para desenvolvimento assistido por IA
 
-### Objetivo
+## Instalação
 
-Destrua todos os inimigos em cada fase para progredir. Após cada fase, sua nave será automaticamente melhorada com um novo estágio, aumentando significativamente seu poder de fogo.
-
-### Sistema de Estágios
-
-- **Estágio 1**: Tiro único
-- **Estágio 2**: Tiro triplo (principal + 2 laterais)
-- **Estágio 3**: Tiro quíntuplo (principal + 4 laterais)
-
-### Tipos de Inimigos
-
-- **Tipo 1**: Inimigos básicos (sprint1.png)
-- **Tipo 2**: Inimigos médios (sprint2.png)
-- **Tipo 3**: Inimigos avançados (sprint3.png)
-
-_Nota: Se os arquivos de sprite não estiverem disponíveis, o jogo usará formas geométricas como fallback._
-
-## Instalação e Execução
-
-### Pré-requisitos
-
-- Python 3.7 ou superior
-- Pygame
-
-### Instalação
-
-1. Clone ou baixe este repositório
+1. Clone o repositório
 2. Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Execução
+## Execução
+
+Existem duas formas de executar o jogo:
+
+1. Via Python diretamente:
 
 ```bash
 python moon_cresta_game.py
 ```
 
+2. Via batch script (Windows):
+
+```bash
+run_game.bat
+```
+
+## Controles
+
+- **Setas**: Movimento da nave
+- **Barra de Espaço**: Disparo
+- **R**: Reiniciar jogo (após game over/vitória)
+- **ESC**: Sair do jogo
+
+## Desenvolvimento com Cursor
+
+O jogo foi desenvolvido utilizando a IDE Cursor, que oferece:
+
+- Geração de código assistida por IA
+- Sugestões contextuais
+- Integração direta com Pygame
+- Debug e execução integrados
+
+### Prompt Utilizado na Criação
+
+O desenvolvimento foi iniciado com o seguinte prompt no Cursor:
+
+```
+Crie um jogo em Python usando a biblioteca Pygame no estilo fixed shooter,
+como o clássico Moon Cresta. O jogador controla uma nave que deve destruir
+inimigos em três fases. Após cada fase, a nave deve acoplar a um novo estágio,
+aumentando seu poder de fogo.
+
+Agora no diretório do jogo existem três arquivos, sprint1.png, sprint2.png e sprint3.png.
+Gostaria que cada uma dessas imagens fosse o inimigo de cada uma das fases,
+respectivamente.
+Também gostaria que ao final do jogo fosse possível teclar R para reiniciar o jogo.
+Por favor, implemente essas alterações.
+```
+
 ## Estrutura do Projeto
 
-- `moon_cresta_game.py`: Arquivo principal do jogo
-- `requirements.txt`: Dependências do projeto
-- `sprint1.png`: Sprite do inimigo da fase 1
-- `sprint2.png`: Sprite do inimigo da fase 2
-- `sprint3.png`: Sprite do inimigo da fase 3
-- `README.md`: Este arquivo
+```
+├── moon_cresta_game.py    # Código principal do jogo
+├── requirements.txt       # Dependências Python
+├── run_game.bat          # Script de execução para Windows
+├── README.md             # Documentação
+├── sprint1.png           # Sprite inimigo fase 1
+├── sprint2.png           # Sprite inimigo fase 2
+└── sprint3.png           # Sprite inimigo fase 3
+```
 
-## Desenvolvimento
+## Contribuições
 
-O jogo foi desenvolvido usando:
+Para contribuir com o projeto:
 
-- **Python 3.x**: Linguagem principal
-- **Pygame**: Biblioteca para desenvolvimento de jogos
-- **Programação Orientada a Objetos**: Classes bem estruturadas para cada elemento do jogo
+1. Faça um fork
+2. Crie uma branch para sua feature
+3. Faça commit das mudanças
+4. Push para a branch
+5. Abra um Pull Request
 
-## Características Técnicas
+## Créditos
 
-- **Resolução**: 800x600 pixels
-- **FPS**: 60 frames por segundo
-- **Sistema de colisão**: Detecção precisa de colisões
-- **Sistema de partículas**: Efeitos de explosão
-- **Estados do jogo**: Playing, Level Complete, Victory, Game Over
+Desenvolvido usando a IDE Cursor com tecnologia de IA para geração e assistência de código.
 
-Divirta-se jogando!
+## Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
